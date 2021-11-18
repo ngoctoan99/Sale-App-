@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "892109195647",
+    "firebase_url": "https://demoseminar-3a02a-default-rtdb.firebaseio.com",
+    "project_id": "demoseminar-3a02a",
+    "storage_bucket": "demoseminar-3a02a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892109195647:android:e45ef93279590798f8324a",
+        "android_client_info": {
+          "package_name": "com.example.demoseminar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892109195647-sueu9dotkmaf4l1i5nupsnqpnd5kp5ir.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.demoseminar",
+            "certificate_hash": "904547935c353e18d4110004bd5a14e2eb50dcb8"
+          }
+        },
+        {
+          "client_id": "892109195647-ij464ammvncjnnne8gnurh512tgek3a2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwUnYbP5PS0GBA0p6mooxjh47pG-ndYEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892109195647-ij464ammvncjnnne8gnurh512tgek3a2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

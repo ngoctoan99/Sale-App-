@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imagesp_orders"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/common_google_signin_btn_icon_dark"></ImageView>
+        <TextView
+            android:id="@+id/tvtenspdongorder"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Tên sản phẩm"
+            android:layout_toRightOf="@+id/imagesp_orders"
+            android:textColor="@color/black"
+            android:textSize="10dp"></TextView>
+        <TextView
+            android:id="@+id/tvdong1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Số lượng : "
+            android:layout_toRightOf="@+id/imagesp_orders"
+            android:layout_below="@+id/tvtenspdongorder"
+            android:textColor="@color/black"
+            android:textSize="10dp"></TextView>
+        <TextView
+            android:id="@+id/tvslspdongorder"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="2"
+            android:layout_toRightOf="@+id/tvdong1"
+            android:layout_below="@+id/tvtenspdongorder"
+            android:textColor="@color/black"
+            android:textSize="10dp"></TextView>
+        <TextView
+            android:id="@+id/tvgiaspdongorder"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="20000000 Đ "
+            android:layout_toRightOf="@+id/imagesp_orders"
+            android:layout_below="@+id/tvslspdongorder"
+            android:textColor="#EA0909"
+            android:textSize="10dp"></TextView>
+        <TextView
+            android:id="@+id/tvtrangthaidongorder"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Đã gửi yêu cầu"
+
+            android:layout_alignParentRight="true"
+            android:textColor="@color/teal_200"
+            android:textSize="10dp"></TextView>
+        
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
