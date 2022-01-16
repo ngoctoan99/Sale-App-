@@ -57,8 +57,8 @@ public class DetailProductFragment extends Fragment {
             for(int i = 0 ; i < productListcart.size(); i++) {
                 if(productListcart.get(i).getTensp().equals(detailsp.getTensp())){
                     dathem = true;
-                    btnthem.setText("Đã Mua");
-                    btnthem.setBackgroundResource(R.drawable.buttonclick);
+                    btnthem.setText("Đã Thêm");
+                    btnthem.setBackgroundResource(R.drawable.custom_btn_dathem);
                     break;
                 }
             }
@@ -69,11 +69,11 @@ public class DetailProductFragment extends Fragment {
                         Toast.makeText(getActivity(), "Sản phẩm đã được thêm", Toast.LENGTH_SHORT).show();
                     }else {
                         dathem = true;
-                        btnthem.setText("Đã Mua");
-                        btnthem.setBackgroundResource(R.drawable.buttonclick);
+                        btnthem.setText("Đã Thêm");
+                        btnthem.setBackgroundResource(R.drawable.custom_btn_dathem);
                         home.addTolistCartProduct(detailsp);
                         home.setCountProductCart(home.getCount() + 1);
-                        Toast.makeText(getActivity(),"Đã thêm sản phẩm. Kiểm tra lại  giỏ hàng",Toast.LENGTH_SHORT);
+                        Toast.makeText(getActivity(),"Đã thêm sản phẩm. Kiểm tra lại  giỏ hàng",Toast.LENGTH_SHORT).show();
 
                     }
                 }

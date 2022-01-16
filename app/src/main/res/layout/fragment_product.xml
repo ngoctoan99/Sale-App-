@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".Product.ProductFragment"
     android:orientation="vertical"
-    android:background="#131939">
+    android:background="@drawable/custom_mh_color">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -29,7 +29,7 @@
                 android:layout_centerInParent="true"
                 android:layout_below="@+id/circle"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/custombutton"
+                android:background="@drawable/custom_search"
                 android:drawableRight="@android:drawable/ic_menu_search"
                 android:hint="  Nhập sản phẩm cần tìm"></AutoCompleteTextView>
             <TextView

@@ -1,5 +1,6 @@
 package com.example.demoseminar;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -25,6 +27,8 @@ import com.example.demoseminar.Orders.OrdersFragment;
 import com.example.demoseminar.Product.Product;
 import com.example.demoseminar.Product.ProductFragment;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,11 +38,14 @@ public class MainActivity extends AppCompatActivity {
     private AHBottomNavigation ahBottomNavigation;
     FragmentTransaction fragmentTransaction;
     private int sl;
+    FirebaseAuth firebaseAuth;
+    ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        actionBar = getSupportActionBar();
         inits();
         setDataforahbottom();
     }
@@ -102,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         sl = count ;
         AHNotification notification = new AHNotification.Builder()
                 .setText(String.valueOf(count))
-                .setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.purple_700))
+                .setBackgroundColor(ContextCompat.getColor(MainActivity.this,R.color.red))
                 .setTextColor(ContextCompat.getColor(MainActivity.this,R.color.white))
                 .build();
         ahBottomNavigation.setNotification(notification,1);
@@ -119,5 +126,19 @@ public class MainActivity extends AppCompatActivity {
     public void setCountForProduct(int position, int count){
         carttList.get(position).setSlsp(count);
     }
+    /*private void checkUserStatus() {
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if(user != null) {
+        }
+        else {
+            startActivity(new Intent(MainActivity.this,Login.class));
+            finish();
+        }
+    }
+    @Override
+    protected void onStart() {
+        checkUserStatus();
+        super.onStart();
+    }*/
 
 }

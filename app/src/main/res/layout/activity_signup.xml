@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Signup"
+    android:background="@drawable/login1">
+    <ImageView
+        android:layout_width="70dp"
+        android:id="@+id/imagelogin"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/create"></ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_below="@id/imagelogin"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Register Account"></TextView>
+    <EditText
+        android:id="@+id/emaildk"
+        android:layout_width="300dp"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/account"
+        android:layout_height="50dp"
+        android:hint=" Nhập email của bạn"
+        android:layout_below="@id/imagelogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/custom_search"></EditText>
+    <EditText
+        android:id="@+id/passworddk"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/password"
+        android:hint=" Nhập mật khẩu của bạn"
+        android:layout_below="@id/emaildk"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_search"></EditText>
+
+    <Button
+        android:id="@+id/btnsignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passworddk"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_search"
+        android:text="Sign Up"
+        app:backgroundTint="#F44336"></Button>
+    <Button
+        android:id="@+id/btnback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Back"
+        android:background="@drawable/custombutton"
+        app:backgroundTint="#F44336"
+        android:layout_below="@+id/btnsignup"></Button>
+</RelativeLayout>

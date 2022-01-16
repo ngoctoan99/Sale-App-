@@ -1,23 +1,31 @@
 package com.example.demoseminar.History;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.demoseminar.Login;
 import com.example.demoseminar.MainActivity;
 import com.example.demoseminar.Orders.DetailOrder;
 import com.example.demoseminar.Orders.Order;
 import com.example.demoseminar.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,6 +37,7 @@ import java.util.List;
 
 public class HistoryFragment extends Fragment {
     View view;
+    FirebaseAuth firebaseAuth;
     private MainActivity home;
     private List<Order> orderList;
     private List<DetailOrder> detailOrderList;
@@ -53,6 +62,7 @@ public class HistoryFragment extends Fragment {
                              Bundle savedInstanceState) {
         view =  inflater.inflate(R.layout.fragment_history, container, false);
         inits();
+        firebaseAuth = FirebaseAuth.getInstance();
         return view;
     }
 
@@ -133,5 +143,36 @@ public class HistoryFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(home,RecyclerView.VERTICAL,false);
         recyclerView3.setLayoutManager(linearLayoutManager);
         recyclerView3.setAdapter(historyAdapter);
+    }
+    private void checkUserStatus() {
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if(user != null) {
+        }
+        else {
+            startActivity(new Intent(getActivity(), Login.class));
+            getActivity().finish();
+        }
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
+        super.onActivityCreated(savedInstanceState);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_logout,menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if(id == R.id.action_logout) {
+            firebaseAuth.signOut();
+            checkUserStatus();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

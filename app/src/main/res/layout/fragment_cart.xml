@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Cart.CartFragment"
-    android:background="#131939">
+    android:background="@drawable/custom_mh_color">
     <RelativeLayout
         android:id="@+id/cart_emplty"
         android:layout_width="match_parent"
